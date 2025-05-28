@@ -1,6 +1,6 @@
 # 🛠 Reparar cliente WSUS que no reporta correctamente
 
-Write-Host "Iniciando reparación de cliente WSUS..." -ForegroundColor Cyan
+Write-Host "Iniciando reparacion de cliente WSUS..." -ForegroundColor Cyan
 
 # 1. Detener servicios de actualización
 Write-Host "Deteniendo servicios..." -ForegroundColor Yellow
@@ -33,4 +33,4 @@ Write-Host "`nEventos recientes de Windows Update:" -ForegroundColor Cyan
 Get-WinEvent -LogName "System" | Where-Object { $_.ProviderName -like "Microsoft-Windows-WindowsUpdateClient" } |
     Select-Object TimeCreated, Message -First 5 | Format-List
 
-Write-Host "`nReparación finalizada. Revisa WSUS en unos minutos para verificar si el estado se actualizó correctamente." -ForegroundColor Green
+Write-Host "`nReparacion finalizada. Revisa WSUS en unos minutos para verificar si el estado se actualizo correctamente." -ForegroundColor Green
